@@ -1,0 +1,23 @@
+<!--signIn.wxml-->
+<view class="body">
+    <view class="sign-head">
+      <view class="sign-head-total">
+        <image src='/images/points.png' class='sign-head-total-img'></image>
+        <text class='sign-head-total-text'>累计积分：<text class='sign-color'>{{total}}</text> 分</text>
+      </view>
+      <view class="sign-head-ed">
+        <text>已签到</text>
+      </view>
+      <view class="sign-head-point">
+        <text>今日已签到，获得 <text class='sign-color'>{{val}}</text> 积分</text>
+      </view>
+    </view>
+    <view class="sign-count">
+      <text class='title'>签到攻略</text>
+      <text class='li'>1.每日签到送10个积分，连续签到一周加送30积分；</text>
+      <text class='li'>2.累计达到100积分，即可进行提现、兑换或充值等操作；</text>
+      <text class='li'>3.周签到期间，漏签一天，将按照新签到时间起重新计算签到周期；</text>
+      <text class='li'>4.每日签到只记录首次积分，多次签到不累加；</text>
+      <text class='li'>5.积分自注册之日起计算有效期一年，逾期不提现或不兑换将自动清零；</text>
+    </view>
+</view>

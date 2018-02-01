@@ -1,0 +1,21 @@
+/* login.wxss */
+.login-pic image{
+  height: 400rpx;
+  width: 100%
+}
+.login-form{
+  margin: 0px 20px;
+  background-color: #ffffff
+}
+.login-form input{
+  border: 1px solid #e5e5e5;
+  margin:10px;
+  padding:5px;
+  border-radius: 3px
+}
+.login-form button{
+  margin:10px;
+}
+.login-click{
+  background-color: #f3f4ff
+}

@@ -1,0 +1,43 @@
+/* pages/MemberInfo/billingDetails/billingDetails.wxss */
+@import "../../../template/loadingMore/loadingMore.wxss" ;
+.body{height: 100%}
+.tabbars.on{
+  color:#E51C23;
+  border-bottom:1rpx solid #E51C23;
+}
+.tabbars{
+  font-size:32rpx;
+  padding: 0;
+  line-height: 100rpx;
+  text-align: center;
+}
+.m-my-tab{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  height:100rpx;
+  background-color: #ffffff;
+  box-shadow:1px 1px 3px #d9d9d9;
+  -moz-box-shadow:1px 1px 3px #d9d9d9;
+  -webkit-box-shadow:1px 1px 3px #d9d9d9;
+}
+.tabbar-list{
+  padding: 5px;
+}
+.scrollView{
+  background-color: #ffffff;
+  width: auto;
+  margin: 5px;
+}
+.tab-list-liem-list{
+  text-align:center;
+  font-size:12px;
+  padding:8px 5px;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+}
+.tab-list-liem-list:nth-child(2n+1){
+  background-color:#E8E9E9;
+}

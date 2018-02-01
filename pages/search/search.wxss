@@ -1,0 +1,31 @@
+/* pages/search/search.wxss */
+.wxSearch{
+  background-color: #ffffff;
+  padding: 20rpx;
+}
+.wxSearch-search{
+  background: #EEEEEE url('http://www.dangxiabs.com/Areas/Mobile/Themes/M1/Content/default/images/home/search_99.png') no-repeat;
+  background-size: 15px;
+  background-position: 5px center;
+  padding:5px 5px 5px 25px; 
+  font-size: 15px;
+  border-radius: 4px;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  color: #999999;
+}
+.search-instr{
+  color:#999;
+  font-size:13px;
+  height:24px;
+  line-height:24px;
+  display: block;
+  padding-left:30rpx;
+  padding-top:15rpx;
+}
+.search-ul{
+  margin: 20rpx;
+}
+.search-ul button{
+  margin: 10rpx
+}

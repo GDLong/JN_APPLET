@@ -1,0 +1,67 @@
+<!--details.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="swiper">
+  <view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <swiper-item>
+          <image src="{{image_default}}" class="slide-image" width="100%" height="150"/>
+      </swiper-item>
+       <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item.img_url}}" class="slide-image" width="100%" height="150"/>
+        </swiper-item>
+      </block> 
+    </swiper>
+  </view>
+  <view class="detail-info">
+    <view class="detail-info-u">
+      <view style="padding:5px 10px;line-height:1.5;">
+        <view class="detail-info-title">{{organiObj.name}}</view>
+        <view class="detail-info-price">
+          <text class="saleProduct-Price-current detail_color">¥{{organiObj.shop_price}}</text>
+          <text class="saleProduct-Price-original detail_color">市场价¥ {{organiObj.market_price}}</text>
+        </view>
+      </view>
+      <view>
+        <block wx:for="{{organiObj.products}}" wx:key="id" wx:for-index="i">
+          <view data-id='{{item.product_id}}' bindtap='checkProductId' class="product_id {{currentItem==item.product_id?'on':''}}">
+            <text>{{item.goods_attr_str}}</text>
+          </view>
+        </block>
+      </view>
+      <view class="detail-info-math weui-flex  weui_top">
+        <view class="weui-flex__item">购买数量</view>
+        <view class="stepper">  
+              <!-- 减号 -->  
+              <text class="{{minusStatus}}" bindtap="bindMinus">-</text>  
+              <!-- 数值 -->  
+              <input type="number" disabled="true" bindchange="bindManual" value="{{organiObj.saleNum}}" />  
+              <!-- 加号 -->  
+              <text class="normal" bindtap="bindPlus">+</text>  
+          </view>
+      </view>
+    </view>
+  </view>
+  <view class="details-pic">
+     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>  
+  </view>
+  <view style="height:100rpx"></view>
+  <view class="fixFoot">
+    <view class="weui-flex">
+      <view class="weui-flex__item weui-flex">
+        <view class="weui-flex__item goHome" bindtap='goHome'>
+          <image src='/images/home.png' class='ico'></image>
+          <text>首页</text>
+        </view>
+        <view class="weui-flex__item goCar weui_left" bindtap='goCar'>
+          <image src='/images/car.png' class='ico'></image>
+          <text>购物车</text>
+          <text class='car_doc' wx:if="{{numCountShow}}">{{numCount}}</text>
+        </view>
+      </view>
+      <view class="weui-flex__item AddCar weui_left" bindtap="AddCar">加入购物车</view>
+      <view class="weui-flex__item BuyNow" bindtap="BuyNow">立即购买</view>
+    </view>
+  </view>
+</view>
+

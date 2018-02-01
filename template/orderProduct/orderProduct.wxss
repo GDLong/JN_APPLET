@@ -1,0 +1,19 @@
+/* template/orderProduct/orderProduct.wxss */
+.orderProduct{
+  padding: 20rpx 0;
+  padding-right:20rpx; 
+  font-size:13px;
+}
+.orderProduct-cell{
+  padding:0px 5px 
+}
+.orderProduct-right{
+  text-align: right
+}
+.orderProduct image{
+  height: 120rpx;
+  width: 120rpx;
+}
+.orderProduct text{
+  display: block
+}

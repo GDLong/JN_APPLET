@@ -1,0 +1,82 @@
+/* searchList.wxss */
+@import "../../template/loadingMore/loadingMore.wxss" ;
+page{height: 100%}
+#scrollView {
+  height:100%;
+}
+.wxSearch{
+  background-color: #ffffff;
+  padding: 10px;
+}
+.wxSearch-search{
+  background: #EEEEEE url('http://www.dangxiabs.com/Areas/Mobile/Themes/M1/Content/default/images/home/search_99.png') no-repeat;
+  background-size: 15px;
+  background-position: 5px center;
+  padding:5px 5px 5px 25px; 
+  font-size: 15px;
+  border-radius: 4px;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  color: #999999;
+}
+.searchBar{
+  background: #ffffff;
+  text-align: center;
+  font-size:16px;
+}
+.searchBar .weui-flex__item{
+  padding: 10px;
+}
+.searchBar .weui-flex__item.on{
+  color: #F02B2B;
+  border-bottom: 1px solid #F02B2B;
+}
+.searchBar .imgText{
+  display: inline-block;
+  vertical-align: middle
+}
+.searchBar .imgSrc{
+  width: 15px;
+  height: 15px;
+  vertical-align: middle
+}
+.navtor-list{
+  margin:10rpx;
+  background:#ffffff;
+}
+.navtor-item {
+  padding:10rpx;
+}
+.navitor-item-pic{
+  width: 200rpx;
+  height: 200rpx;
+}
+.navitor-item-instruc{
+  margin-left:15rpx;
+  font-size:15px;
+  line-height: 1.5;
+}
+.saleprice{
+  color:#F02B2B;
+  font-size: 18px;
+}
+.originalprice{
+  color:#999;
+  margin-left:5px; 
+  font-size: 13px;
+  text-decoration:line-through;
+}
+.buynumber{
+  color:#999;
+  display: block;
+  font-size: 13px;
+}
+.fixed{
+  height: 42px;
+}
+.fixed-start{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0
+}

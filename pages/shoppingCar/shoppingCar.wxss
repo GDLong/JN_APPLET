@@ -1,0 +1,178 @@
+/* pages/shoppingCar/shoppingCar.wxss */
+.cart-box .item{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  padding:20rpx;
+  background:#ffffff;
+  margin-bottom:5px;
+  font-size: 15px;
+}
+.cart-box .item .goods-info{
+  margin-left: 20rpx;
+  line-height:1.5;
+  width: 400rpx;
+}
+.cart-box .goods-img{
+  width: 160rpx;
+  height: 160rpx;
+  margin-left: 20rpx;
+}
+.cart-box .row{
+  color: #333333;
+  display: flex;
+  flex-direction: row;
+  width: 430rpx;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.cart-box .goods-name{
+  font-size: 32rpx;
+  width: calc(100% - 100rpx);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cart-box .goods-price{
+  font-size: 32rpx;
+}
+.cart-box .goods-type{
+  color: #999;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+}
+.cart-box .goods-btn{
+  width: 50rpx;
+  height: 50rpx;
+  padding: 0;
+  line-height: 50rpx;
+  font-weight: bold;
+  color: #999;
+  margin: 0;
+  background: #333;
+}
+.cart-box .num{
+  color: #999;
+  width: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 24rpx;
+}
+.cart-box .btn-add{
+  font-size: 40rpx;
+}
+.cart-box .btn-minus{
+  font-size: 20rpx;
+}
+.cart-box .btn-groups{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-radius: 10rpx;
+}
+.cart-fixbar{
+  position: fixed;
+  bottom: 0;
+  background: #ffffff;
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cart-fixbar .allSelect{
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  align-items: center;
+  color: #999999;
+  font-size: 32rpx;
+  padding-left: 20rpx;
+}
+.cart-fixbar .allSelect-text{
+  margin-left: 20rpx;
+}
+.cart-fixbar .count{
+  margin-left: 50rpx;
+  font-size: 36rpx;
+}
+.cart-fixbar .order{
+  color:#fff;
+  height: 100rpx;
+  background: #E51C23;
+  line-height: 100rpx;
+  position: absolute;
+  right: 0;
+  padding: 0 40rpx;
+  font-size: 32rpx;
+}
+.cart-fixbar .allnum{
+  font-size: 24rpx;
+}
+
+.saleprice{
+  color:#F02B2B;
+  font-size: 16px;
+}
+.originalprice{
+  color:#999;
+  margin-left:5px; 
+  font-size: 13px;
+  text-decoration:line-through;
+}
+.delete-view{
+  text-align: right;
+}
+.delete-btn{
+  width: 40rpx;
+  height: 40rpx;
+}
+/*加减  */
+/*主容器*/  
+.stepper {   
+    height: 50rpx;  
+    /*给主容器设一个边框*/  
+    border: 1rpx solid #ccc;  
+    border-radius: 3rpx;   
+}  
+/*加号和减号*/  
+.stepper text {  
+    width: 50rpx;  
+    line-height: 50rpx;  
+    text-align: center;  
+    float: left;  
+}  
+/*数值*/  
+.stepper input {  
+    width: 60rpx;  
+    height: 50rpx;  
+    float: left;  
+    margin: 0 auto;  
+    text-align: center;  
+    font-size: 12px;  
+    min-height:auto;
+    /*给中间的input设置左右边框即可*/  
+    border-left: 1rpx solid #ccc;  
+    border-right: 1rpx solid #ccc;  
+}   
+/*普通样式*/  
+.stepper .normal{  
+    color: black;  
+}  
+/*禁用样式*/  
+.stepper .disabled{  
+    color: #ccc;  
+} 
+.empty{
+  text-align: center;
+  margin-top: 50%;
+  font-size: 13px;
+  color: #666666;
+}
+.empty-car{
+  width:100rpx;
+  height: 100rpx;
+  display: block;
+  margin: 0 auto;
+  padding-bottom:5px; 
+}

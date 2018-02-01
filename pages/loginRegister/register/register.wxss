@@ -1,0 +1,63 @@
+/* register.wxss */
+.body{overflow: hidden;}
+.am-update{
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 14px;
+    padding: 25rpx;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+}
+.am-update image{
+  width:40rpx;
+  height:40rpx;
+  margin-right:5px;
+}
+.am-update input{
+    padding: 0px 5px;
+    height: 60rpx;
+    line-height: 60rpx;
+    border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px; 
+    width: 340rpx;
+}
+.am-btn{
+    margin:80rpx;
+}
+.am-btn button[type="default"] {
+  background-color: #E51C23;
+  color: #ffffff;
+}
+.register{
+  height: 200rpx;
+  background-color: #EA090F;
+  color: #ffffff
+}
+.register-headImg{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 25rpx;
+  border-radius: 100%;
+  -moz-border-radius: 100%; 
+  -webkit-border-radius: 100%; 
+}
+.register-user{
+  align-self: center;
+  -moz-align-self: center;
+  -webkit-align-self: center;
+  font-size: 14px;
+}
+.register-user .userName text{
+  display: block
+}
+.register-user .userName text:last-child{
+  font-size: 9px
+}
+.am-update button{
+  background-color: #E51C23;
+  color: #ffffff;
+  font-size: 13px
+}

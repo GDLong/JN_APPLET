@@ -1,0 +1,22 @@
+<!--login.wxml-->
+<view class="body">
+  <view class="login-pic">
+    <image src='/images/login-banner.jpg'></image>
+  </view>
+  <form class="login-form" bindsubmit="loginSubmit">
+    <view class='weui-flex'>
+      <!-- <image src='/images/04.png'></image> 311888-->
+      <input type="number" name="phoneNumber" placeholder="请输入帐号" value='' class='weui-flex__item'/>
+    </view>
+   <view class='weui-flex'>
+      <!-- <image src='/images/04.png'></image> 535566-->
+      <input password="true" name="passwordNumber" placeholder="请输入密码" value='' class='weui-flex__item'/>
+    </view>
+    <button type="primary" 
+            size="{{defaultSize}}" 
+            loading="{{loading}}" 
+            disabled="{{disabled}}" 
+            hover-class="login-click"
+            form-type="submit"> 开 始 </button>
+  </form>
+</view>

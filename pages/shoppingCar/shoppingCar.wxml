@@ -1,0 +1,49 @@
+<!--pages/shoppingCar/shoppingCar.wxml-->
+<view class='body'>
+  <view wx:if="{{show1}}">
+    <view class="cart-box">
+      <view class="item weui-flex" wx:for="{{list}}" wx:key="list">
+        <icon type="{{item.select}}" size="20" color='#E51C23' data-index="{{index}}" data-select="{{item.select}}" bindtap="change"/>
+        <image src="{{item.image_thumb}}" class="goods-img"></image> 
+        <view class="weui-flex__item weui-flex-column goods-info">
+          <view class='ellipsis  weui-flex-column__item'>{{item.name}}</view>
+          <view class='weui-flex-column__item'>
+            <text class='saleprice'>￥{{item.shop_price}}</text>  
+            <text class='originalprice'>￥{{item.market_price}}</text>
+          </view>
+          <view class='weui-flex-column__item'>
+            <view class="num-box weui-flex">
+              <view class="stepper">  
+                <!-- 减号 -->  
+                <text data-index="{{index}}" data-num="{{item.saleNum}}" bindtap="subtraction">-</text>  
+                <!-- 数值 -->  
+                <input type="number" disabled="true" value="{{item.saleNum}}" />  
+                <!-- 加号 -->  
+                <text class="normal" data-index="{{index}}" data-num="{{item.saleNum}}" bindtap="addtion">+</text>  
+              </view>
+              <view class='weui-flex__item delete-view'>
+                <image class='delete-btn' src='/images/delete-black.png' data-index="{{index}}" bindtap='deleteItem'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style='height:100rpx'></view>
+    <view class="cart-fixbar">
+      <view class="allSelect">
+          <icon type="{{allSelect}}" size="26" color='#E51C23' data-select="{{allSelect}}" bindtap="allSelect"/>
+          <view class="allSelect-text">全选</view>
+      </view>
+      <view class="count">
+          <text>合计：</text>
+          <text class='saleprice'>￥{{count}}</text> 
+      </view>
+      <view class="order" bindtap='goPay'>去结算</view>
+    </view>
+  </view>
+  <view class='empty' wx:else>
+    <image src="/images/car.png" class="empty-car"></image> 
+    <text>去添加点什么吧</text>    
+  </view>
+</view>

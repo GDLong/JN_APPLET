@@ -1,0 +1,60 @@
+<!--Member.wxml-->
+<view class="body">
+  <view class="member-top">
+    <view class="m-top-user weui-flex">
+      <view class="m-top-user-img" wx:if="{{showInfo}}"><image src="{{Authorization.avatarUrl}}"></image></view>
+      <view class="m-top-user-Backimg" wx:else><image src="{{Authorization.avatarUrl}}"></image></view>
+      <view class="m-top-user-center weui-flex__item weui-flex" wx:if="{{showInfo}}">
+        <view class="m-top-userInfo weui-flex__item">
+          <view class="m-top-username">昵称：{{userInfo.userName}}</view>
+          <view class="m-top-card">ID：{{userInfo.MemerID}}</view>
+          <view class="m-top-time">注册时间：{{userInfo.registerTime}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-flex m-top-bar">
+      <view class="weui-flex__item m-top-b" data-url='/pages/MemberInfo/myMember/myMember' bindtap='navigaToUrl'>
+        <text>我的会员</text>
+        <text class='user-color'>{{memberNumber}}人</text>
+      </view>
+      <view class="weui-flex__item m-top-b weui_left " data-url='/pages/MemberInfo/accountBalance/accoundBalance' bindtap='navigaToUrl'>
+        <text>账户余额</text>
+        <text class='user-color'>¥{{accountBalance}}</text>
+      </view>
+      <view class="weui-flex__item m-top-b weui_left ">
+        <text>可用积分</text>
+        <text class='user-color'>{{availableIntegral}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="member-fot">
+    <view class="weui-flex m-fot">
+      <view class="m-fot__item weui_top" data-url="/pages/MemberInfo/signIn/signIn" bindtap='navigaToUrl'>
+        <image src="/images/qiandao.png"></image>
+        <text>每日签到</text>
+      </view>
+      <view class="m-fot__item weui_left weui_top" data-url="/pages/MemberInfo/myOrder/myOrder" bindtap='navigaToUrl'>
+        <image src="/images/wodedingdan.png"></image>
+        <text>我的订单</text>
+      </view>
+      <view class="m-fot__item weui_top" data-url="/pages/MemberInfo/applicationWithdrawal/applicationWithdrawal" bindtap='navigaToUrl'>
+        <image src="/images/tixian.png"></image>
+        <text>提现申请</text>
+      </view>
+      <view class="m-fot__item weui_left weui_top">
+        <image src="/images/tuiguangma.png"></image>
+        <text>推广码</text>
+        <button type="default" class="share-but" open-type="share">分享</button>
+      </view>
+      <view class="m-fot__item weui_top" data-url="/pages/MemberInfo/accountManagement/accountManagement" bindtap='navigaToUrl'>
+        <image src="/images/gerenshezhi.png"></image>
+        <text>账户管理</text>
+      </view>
+      <view class="m-fot__item weui_left weui_top">
+        <image src="/images/dazhuanpan.png"></image>
+        <text>幸运抽奖</text>
+      </view>
+    </view>
+  </view>
+  <button type="default" class="m-top-logout" wx:if="{{showInfo}}" bindtap='logOut'>退出登录</button>
+</view>

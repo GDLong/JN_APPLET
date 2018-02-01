@@ -1,0 +1,42 @@
+<!--accountManagement.wxml-->
+<view class="body">
+  <form bindsubmit="formSubmit">
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/04.png'></image>
+      <text>真实姓名：</text>
+      <input name="username" value='{{userInfo.UserName}}' disabled='true'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/02.png'></image>
+      <text>手机号码：</text>
+      <input name="phonenumber" type="number" value='{{userInfo.Userphone}}'/>
+    </view>
+    <!-- <view class="am-update weui-flex weui_bottom weui-arrow-right">
+      <image src='/images/vip.png'></image>
+      <text>姓别：</text>
+      <view class='weui-flex__item'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <text>{{array[index]}}</text>
+        </picker> 
+      </view>
+    </view> -->
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/05.png'></image>
+      <text>开户行：</text>
+      <input name="bank" />
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/03.png'></image>
+      <text>银行卡号：</text>
+      <input name="cardnumber" type="number" />
+    </view>
+    <!-- <view class="am-update weui-flex weui_bottom weui-arrow-right" bindtap="toNativeAddress">
+      <image src='/images/vip.png'></image>
+      <text>收货地址：</text>
+      <text class='ellipsis weui-flex__item'>{{address}}</text>
+    </view> -->
+    <view class="am-btn">
+      <button type="default" formType="submit">变更</button>
+    </view>
+  </form>
+</view>

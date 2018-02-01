@@ -1,0 +1,6 @@
+<!--loadmore_line.wxml-->
+<template name="loadmore_line">
+  <view class="weui-loadmore weui-loadmore_line">
+    <text class="weui-loadmore__tips">{{loadmore}}</text>
+  </view>
+</template>

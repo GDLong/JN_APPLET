@@ -1,0 +1,16 @@
+<!--template/orderProduct/orderProduct.wxml-->
+<template name="orderProduct">
+  <view class="orderProduct weui-flex weui_bottom">
+    <view>
+      <image src='{{goods_thumb}}'></image>
+    </view>
+    <view class='orderProduct-cell weui-flex__item'>
+      <text>{{goods_name}}</text>
+      <text>{{brand_name}}</text>
+    </view>
+    <view class='orderProduct-right'>
+      <text>￥{{goods_price}}</text>
+      <text>x{{goods_number}}</text>
+    </view>
+  </view>
+</template>

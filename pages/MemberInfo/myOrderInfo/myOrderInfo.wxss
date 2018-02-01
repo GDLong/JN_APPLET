@@ -1,0 +1,100 @@
+@import "/template/orderProduct/orderProduct.wxss" ;
+/* pages/MemberInfo/myOrderInfo/myOrderInfo.wxss */
+.order-myAddress{
+    height: 150rpx;
+    padding: 0 20rpx;
+    background-color: #ffffff;
+}
+.order-address-l{
+    align-self: center;
+    -moz-align-self: center;
+    -webkit-align-self: center;
+}
+.order-address-ico{
+    width: 20px;
+}
+.order-address-r{
+    align-self: center;
+    -moz-align-self: center;
+    -webkit-align-self: center; 
+    line-height: 2;
+    padding: 0 10px;
+    font-size: 13px;
+    overflow: hidden
+}
+.order-address-username{
+  display: block
+}
+.order-address-address{
+  display: block
+}
+.order-info-product{
+  padding-left:20rpx;
+  background-color:#ffffff;
+  margin-bottom:10rpx;
+  margin-top:10rpx; 
+}
+.my-order-number{
+  font-size: 12px;
+  color: #999999;
+  padding: 20rpx 0;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+
+}
+.product-flag{
+  width: 20px;
+  align-self: center
+}
+.order-info-number{
+  padding:20rpx;
+  background-color:#ffffff;
+  font-size:13px; 
+}
+.order-info-number text{
+  display: block;
+  line-height: 1.5;
+  color: #666666
+}
+.order-info-logistical{
+  padding: 20rpx;
+  background-color:#ffffff;
+  font-size:13px; 
+  margin-top: 10rpx;
+}
+.order-info-logistical .weui-flex__item{
+  color: #666666
+}
+.order-info-trueCount{
+  padding: 20rpx;
+  background-color:#ffffff;
+  font-size:13px; 
+  margin-top: 10rpx;
+  color: #666666
+}
+.order-info-trueCount .weui-flex{
+  line-height:1.8;
+}
+.order-info-red{
+  color:  #E51C23
+}
+.order-info-trueCount-method{
+  text-align: right;
+  font-size: 15px;
+  color: #333333;
+  line-height:2;
+}
+.goPay{
+  font-size:14px;
+  margin:5px;
+  line-height:2;
+  color: #F49786;
+  border:1px solid #F49786
+}
+.operation-btn{
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}

@@ -1,0 +1,35 @@
+<!--myMember.wxml-->
+<import src="../../../template/loadingMore/loadingMore.wxml" />
+<view class="body">
+  <view style='height:100rpx'>
+    <view class="m-my-tab weui-flex">
+      <view class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn">一级会员</view>
+      <view class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn">二级会员</view>
+      <view class="tabbars weui-flex__item {{tabbars3?'on':' '}}" bindtap="tabbars3Fn">三级会员</view>
+    </view>
+  </view>
+  <view class="scrollView">
+    <view class="tabbar-list">
+      <view class="tabbar-list-item">
+        <view class="weui-flex tab-list-liem-list" style="font-weight: bold">
+          <view class="weui-flex__item">编号</view>
+          <view class="weui-flex__item">姓名</view>
+          <view class="weui-flex__item">推荐人</view>
+          <view class="weui-flex__item">加入时间</view>
+        </view>
+        <block wx:for="{{ListItem}}" wx:for-item="item">
+          <view class="weui-flex tab-list-liem-list">
+            <view class="weui-flex__item">{{item.MemberID}}</view>
+            <view class="weui-flex__item">{{item.MemberName}}</view>
+            <view class="weui-flex__item">{{item.UserAccount}}</view>
+            <view class="weui-flex__item">{{item.CreateTime}}</view>
+          </view>
+        </block>
+        <view  wx:if="{{loadingM}}">
+          <template is="loadmore" />
+        </view>
+        <view wx:else class='loadingM'>没有更多信息了~</view> 
+      </view>
+    </view>
+  </view>
+</view>

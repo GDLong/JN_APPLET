@@ -1,0 +1,7 @@
+<!--loadmore.wxml-->
+<template name="loadmore">
+ <view class="weui-loadmore">
+    <view class="weui-loading"></view>
+    <text class="weui-loadmore__tips">正在加载</text>
+  </view>
+</template>

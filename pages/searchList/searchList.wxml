@@ -1,0 +1,48 @@
+<!--searchList.wxml-->
+<import src="../../template/loadingMore/loadingMore.wxml" />
+<view class="body">
+  <view class="wxSearch">
+    <navigator url='/pages/search/search' open-type='redirect'>
+      <view class='wxSearch-search'>寻找你喜欢的商品</view>
+    </navigator>
+  </view>
+  <view class="search weui_top">
+    <view class='fixed'>
+      <view class="searchBar weui-flex weui_bottom {{fixed?'fixed-start':''}}">
+        <view class="weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn">
+            <text class="imgText">综合</text>
+        </view>
+        <view class="weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn">
+            <text class="imgText">销量</text>
+        </view>
+        <view class="weui-flex__item {{tabbars3?'on':' '}}" bindtap="tabbars3Fn">
+            <text class="imgText">价格</text>
+            <image src='{{imgSrc}}' class="imgSrc"></image>  
+        </view>
+      </view>
+    </view>
+    <view class="searchList">
+      <block wx:for="{{searchList}}" wx:for-item="item">
+        <navigator url='/pages/details/details?id={{item.id}}' class='navtor-list'>
+          <view class='navtor-item weui-flex'>
+            <view style='font-size:0;'>
+              <image class='navitor-item-pic' src='{{item.thumb}}'></image>
+            </view>
+            <view class='navitor-item-instruc weui-flex__item weui-flex-column'>
+                <view class='weui-flex-column__item weui-clamp'>{{item.name}}</view>
+                <view class='weui-flex-column__item'>
+                  <text class='saleprice'>¥{{item.shop_price}}</text>
+                  <text class='originalprice'>¥{{item.market_price}}</text>
+                  <text class='buynumber'>{{item.buyNumber}}人购买</text>
+                </view>
+            </view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <view  wx:if="{{loadingM}}">
+      <template is="loadmore" />
+    </view>
+    <view wx:else class='loadingM'>没有更多商品了~</view> 
+  </view>
+</view>

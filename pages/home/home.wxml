@@ -1,0 +1,70 @@
+ <import src="../../template/product/product.wxml" /> 
+ <import src="../../template/loadmore_line/loadmore_line.wxml" /> 
+ <import src="../../template/loadingMore/loadingMore.wxml" /> 
+<!--home.wxml-->
+  <view class="body">
+    <view class="swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:for-item="item"  wx:key="*this">
+          <swiper-item>
+            <navigator url="{{item.ad_link}}">
+              <image src="{{item.img_url}}" class="slide-image" width="100%" height="150"/>
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="tabbar weui-flex">
+      <view class="tabbars weui-flex__item" bindtap="tabbars1Fn">
+        <navigator url="/pages/searchList/searchList">
+          <image background-size="cover" src="/images/activity-mall.png" class="tabbars-img"></image>
+        </navigator>
+      </view>
+      <view class="tabbars weui-flex__item" bindtap="tabbars2Fn">
+        <image background-size="cover" src="/images/integra-mall.png" class="tabbars-img"></image>
+      </view>
+    </view>
+    <view class="tabbar-list">
+      <view class="tabbar-list-item">
+        <view class="new-products">
+          <view class="new-p-title weui-arrow-right weui_bottom">
+            <text class="fl">新品推荐</text>
+            <navigator url="/pages/searchList/searchList?code=isnew" class="fr"><text class='more'>更多新品 </text></navigator>
+          </view>
+          <view class="new-p-list weui-flex">
+            <block wx:for="{{newProductList}}" wx:for-item="item"  wx:key="*this">
+              <view class="new-p-list-item weui-flex__item">
+                <navigator url='/pages/details/details?id={{item.id}}'>
+                  <view class="new-p-list-info">
+                    <text class="new-p-list-i-t">{{item.name}}</text>
+                    <view class="new-p-list-i-p">
+                      <text class="fl">¥{{item.shop_price}}</text>
+                      <text class="fr">¥{{item.market_price}}</text>
+                    </view>
+                  </view>
+                  <view class="new-p-list-pic">
+                    <image background-size="cover" src="{{item.thumb}}"></image>
+                  </view>
+                </navigator>
+              </view>
+            </block>
+          </view>
+        </view>
+        <view class="loadmore">
+          <template is="loadmore_line" data="{{loadmore}}" />
+        </view>
+        <block wx:for="{{productList}}" wx:for-item="item"  wx:key="*this">
+          <template is="productItem" data="{{...item}}" />
+        </block>
+        <view  wx:if="{{loadingM}}">
+          <template is="loadmore" />
+        </view>
+        <view wx:else class='loadingM'>没有更多商品了~</view> 
+      </view>
+    </view>
+  </view> 
+
+
+
+
+

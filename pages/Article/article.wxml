@@ -1,0 +1,17 @@
+<!--pages/Article/article.wxml-->
+<view class="body">
+  <view class='article-head'>
+    <view class='article-title'>
+      <text>{{ArticleObj.title}}</text>
+    </view>
+    <view class='article-date'>
+      <text class='data-time'>{{ArticleObj.date}}</text>
+    </view>
+  </view>
+  <view class='article-body'>
+    <image src='{{ArticleObj.bgpic}}' mode='aspectFill'></image>
+    <block wx:for="{{ArticleObj.article}}" wx:for-item="item"  wx:key="*this">
+      <text>{{item}}</text>
+    </block>
+  </view>
+</view>

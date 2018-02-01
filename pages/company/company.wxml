@@ -1,0 +1,57 @@
+<!--company.wxml-->
+<view class="body">
+  <view class="union-bg">
+    <image class="union-bg-img" src="{{unionBg}}"></image>
+  </view>
+  <view style='height:100rpx'>
+    <view class="tabbar weui-flex">
+      <view class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn">公司介绍</view>
+      <view class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn">新闻动态</view>
+      <view class="tabbars weui-flex__item {{tabbars3?'on':' '}}" bindtap="tabbars3Fn">服务指南</view>
+      <view class="tabbars weui-flex__item {{tabbars4?'on':' '}}" bindtap="tabbars4Fn">联系我们</view>
+    </view>
+  </view>
+  <view class="tabbar-list">
+    <view class="tabbar-list-item" wx:if="{{tabbars1}}">
+      <view class='companyInfo'>
+        <text>江苏犟牛网络技术有限公司(以下简称“犟牛公司”)，于2014年成立于江阴临港新城国家软件园，注册资本为1000万人民币。公司高举“民族魂，中国梦”的大旗，凭借互联网事业发展机遇，积极响应中国政府(互联网+)计划。催生新的经济形态，并为大众创业、万众创新提供环境。</text> 
+        <text>犟牛公司立足于长三角地区，放眼全国，产业主要涉及商业、金融、文化、慈善四大板块，以国货正品为运营主体，围绕“民族魂，中国梦”的核心理念，致力于中国民族品牌的崛起。公司依靠互联网传感技术、信息网络技术，构建商品展示、应用、交易、管理的公共信息服务平台。平台将生产要素和供应链进行深度重组，成为信息化带动工业化的现实载体。</text>
+        <image src='http://www.jnwlsc.com/upload/201610/1477624015180044.png' class='companyInfo-img'></image>
+      　<text>犟牛公司结合国内互联网发展形式，创新提出“犟牛商圈联盟”模式，为各领域实现商业智能、异业联盟、精准营销决策管理、产业链整合提供全方位的智慧商业解决方案，帮助各行业、各领域重组供应链和需求链，重塑其商业模式、业务模式、盈利模式和管理模式。公司凭借商业模式创新、盈利模式创新、分配制度创新和技术应用创新助力中国商业转型升级，引领国内智慧商业的全新变革。</text>
+        <text>犟牛公司立足长三角地区，经过不懈的努力，犟牛各级运营网络已遍布江浙沪地区。在省市各职能部门的指导和支持下，犟牛公司将继续努力，放眼全国市场，整合各类社会资源，提高产品竞争力，犟牛人将向着更加远大的目标努力奋斗!</text>
+      </view>
+      <!-- <navigator url="/pages/loginRegister/register/register" hover-class="navigator-hover">分享</navigator> -->
+    </view>
+    <view class="tabbar-list-item" wx:if="{{tabbars2}}">
+      <view class='news'>
+        <view class='weui-flex news-main'>
+          <text class='weui-flex__item news-title'>集团要闻</text>
+          <!-- <text class='news-more  weui-arrow-right'>更多</text> -->
+        </view>
+        <block wx:for="{{newsList}}" wx:for-item="item"  wx:key="*this">
+          <navigator url='/pages/Article/article?id={{item.id}}'>
+            <view class='weui-flex news-list'>
+                <text class='weui-flex__item ellipsis'>{{item.title}}</text>
+                <text class='news-date'>{{item.date}}</text>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+    <view class="tabbar-list-item" wx:if="{{tabbars3}}">
+      服务指南
+    </view>
+    <view class="tabbar-list-item" wx:if="{{tabbars4}}">
+      <view class='contactUs'>
+        <image class='contactUs-img' src='http://api.map.baidu.com/staticimage?center=120.311052,31.923989&zoom=18&width=530&height=340&markers=120.31133,31.924104' mode='aspectFill'></image>
+        <view class='contactUs-address'>
+            <text class='contactUs-title'>江苏犟牛网络技术有限公司</text>
+            <text>地址：江苏省江阴市长江路218号名都国际大厦9层</text>
+            <text>电话：400-8282-993</text>
+            <text>邮编：214400</text>
+            <text>网址：www.jnwlsc.com    www.ejniu.com</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

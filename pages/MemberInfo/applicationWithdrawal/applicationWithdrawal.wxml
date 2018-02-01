@@ -1,0 +1,33 @@
+<!--applicationWithdrawal.wxml-->
+<view class="body">
+  <form bindsubmit="formSubmit">
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/01.png'></image>
+      <text>提现金额：</text>
+      <input name="applicatMoney" type='number' placeholder='提现必须是100的倍数'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/04.png'></image>
+      <text>卡主姓名：</text>
+      <input name="username" value='{{userInfo.UserName}}' disabled='true'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/03.png'></image>
+      <text>收款卡号：</text>
+      <input name="cardnumber" type="number" />
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/05.png'></image>
+      <text>开户行：</text>
+      <input name="bank" value='{{userInfo.BanName}}' />
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/06.png'></image>
+      <text>开户地址：</text>
+      <input name="bankaddress" />
+    </view>
+    <view class="am-btn">
+      <button type="default" formType="submit" >提现</button>
+    </view>
+  </form>
+</view>

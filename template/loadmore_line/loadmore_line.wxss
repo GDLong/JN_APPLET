@@ -1,0 +1,24 @@
+/* loadmore_line.wxss */
+.weui-loadmore_line {
+  border-top:1px solid #e5e5e5;
+  height:1px;
+  position:relative;
+  top:1.4em;
+}
+.weui-loadmore {
+  width:90%;
+  line-height:1.6em;
+  font-size:14px;
+  text-align:center;
+}
+.weui-loadmore_line .weui-loadmore__tips {
+    position: relative;
+    top: -.9em;
+    padding: 0 .55em;
+    background-color: #F1F1F1;
+    color: #999;
+}
+.weui-loadmore__tips {
+    display: inline-block;
+    vertical-align: middle;
+}

@@ -1,0 +1,26 @@
+ <import src="../../template/business/business.wxml" /> 
+<!--Union.wxml-->
+<view class="body">
+  <view class="union-bg">
+    <image class="union-bg-img" src="{{unionBg}}"></image>
+  </view>
+    <view class="tabbar weui-flex">
+      <view class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn">
+        附近商家
+      </view>
+      <view class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn">
+        商家活动
+      </view>
+    </view>
+
+  <view class="tabbar-list">
+    <view class="tabbar-list-item" wx:if="{{tabbars1}}">
+      <block wx:for="{{businessList}}" wx:for-item="item">
+        <template is="businessItem" data="{{...item}}" />
+      </block> 
+    </view>
+    <view class="tabbar-list-item" wx:if="{{tabbars2}}">
+      敬请关注
+    </view>
+  </view>
+</view>

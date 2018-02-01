@@ -1,0 +1,13 @@
+<!--business.wxml-->
+<template name="businessItem">
+  <view class="business-item weui-flex">
+    <view class="business-orso">
+      <image class="business-item-img" src="{{UpfilesUrl}}" background-size="cover"></image>   
+    </view>
+    <view class="weui-flex__item business-orso">
+      <view class="business-item-title">{{userName}}</view>
+      <view class='km'>距您 {{result}}km</view>
+    </view>
+    <view class="business-item-btn" data-lx="{{ordinatesX}}" data-ly="{{ordinatesY}}" bindtap="viewMapLocal">导航</view>
+  </view>
+</template>

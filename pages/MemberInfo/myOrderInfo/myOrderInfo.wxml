@@ -1,0 +1,52 @@
+<import src="/template/orderProduct/orderProduct.wxml" /> 
+<!--pages/MemberInfo/myOrderInfo/myOrderInfo.wxml-->
+<view class="body">
+  <view class='order-info-cutdown'>
+    等待付款
+    {{clock}} {{micro_second}}
+  </view>
+  <view class="order-myAddress weui-flex">
+    <view class="order-address-l">
+      <image class="order-address-ico" src="/images/address.png" mode="widthFix"></image>
+    </view>
+    <view class="weui-flex__item order-address-r">
+      <text class="order-address-username">{{username}} {{telNumber}}</text>
+      <text class="order-address-address ellipsis">地址：{{address}}</text>
+    </view>
+  </view>
+  <view class='order-info-product'>
+    <view class='weui-flex weui_bottom my-order-number'>
+      <image class="product-flag" src="/images/address.png" mode="widthFix"></image>
+      <text class='weui-flex__item'>犟牛国货</text>
+    </view>
+    <view>
+      <block wx:for="{{orderProductList}}" wx:for-item="item">
+        <template is="orderProduct" data="{{...item}}" />
+      </block>
+    </view>
+  </view>
+  <view class='order-info-number'>
+    <text>订单编号：1234567</text>
+    <text>下单时间：2017-09-25 20:30:12</text>
+  </view>
+  <view class='order-info-logistical weui-flex'>
+    <text class='weui-flex__item'>配送方式</text>
+    <text>中通快递 邮费￥25</text>
+  </view>
+  <view class='order-info-trueCount'>
+    <view class='weui-flex'>
+      <text class='weui-flex__item'>商品金额</text>
+      <text class='order-info-red'>运费</text>
+    </view>
+    <view class='weui-flex'>
+      <text class='weui-flex__item'>￥2000.00</text>
+      <text class='order-info-red'>+ ￥15.00</text>
+    </view>
+    <view class='order-info-trueCount-method weui_top'>实付金额：<text class='order-info-red'>￥500.00</text></view>
+  </view>
+  <view class='operation-btn weui-flex'>
+    <view class='weui-flex__item'><text>取消订单</text></view>
+    <view> <button type='default' class='goPay'>去支付</button> </view>
+  </view>
+</view>
+

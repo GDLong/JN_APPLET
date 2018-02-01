@@ -1,0 +1,20 @@
+<!--product.wxml-->
+<template name="productItem">
+  <view class="saleProduct">
+    <navigator url="/pages/details/details?id={{id}}">
+      <image class="saleProduct-img" src="{{thumb}}" background-size="cover" mode="scaleToFill"></image>  
+      <view class="saleProduct-Mesg weui-flex">
+          <view class="saleProduct-Name weui-flex__item">
+          {{name}}
+              <!-- <text class="saleProduct-Name-title ellipsis">{{title}}</text> -->
+              <!-- <text class="saleProduct-Name-label">{{label}}</text> -->
+          </view>
+          <view class="saleProduct-Price">
+             <text class="saleProduct-Price-current">¥{{shop_price}}</text>
+             <text class="saleProduct-Price-original">¥{{market_price}}</text>
+          </view>
+      </view>
+    </navigator>
+  </view>
+</template>
+

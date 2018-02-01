@@ -1,0 +1,36 @@
+<!--pages/MemberInfo/billingDetails/billingDetails.wxml-->
+<import src="../../../template/loadingMore/loadingMore.wxml" />
+<view class="body">
+  <view style='height:100rpx'>
+    <view class="m-my-tab weui-flex">
+      <view class="tabbars weui-flex__item {{tabbars==1?'on':' '}}" bindtap="tabbars1Fn">商品销售</view>
+      <view class="tabbars weui-flex__item {{tabbars==2?'on':' '}}" bindtap="tabbars2Fn">业务奖励</view>
+      <view class="tabbars weui-flex__item {{tabbars==3?'on':' '}}" bindtap="tabbars3Fn">金币余额</view>
+      <view class="tabbars weui-flex__item {{tabbars==4?'on':' '}}" bindtap="tabbars4Fn">积分余额</view>
+    </view>
+  </view>
+  <view class="scrollView">
+    <view class="tabbar-list">
+      <view class="tabbar-list-item">
+        <view class="weui-flex tab-list-liem-list" style="font-weight: bold">
+          <view class="weui-flex__item">操作人</view>
+          <view class="weui-flex__item">流水金额</view>
+          <view class="weui-flex__item">流水类型</view>
+          <view class="weui-flex__item">流水时间</view>
+        </view>
+        <block wx:for="{{ListItem}}" wx:for-item="item">
+          <view class="weui-flex tab-list-liem-list">
+            <view class="weui-flex__item">{{item.remark}}</view>
+            <view class="weui-flex__item">{{item.FlowMoney}}</view>
+            <view class="weui-flex__item">{{item.flowName}}</view>
+            <view class="weui-flex__item">{{item.CreateTime}}</view>
+          </view>
+        </block>
+        <view  wx:if="{{loadingM}}">
+          <template is="loadmore" />
+        </view>
+        <view wx:else class='loadingM'>没有更多信息了~</view> 
+      </view>
+    </view>
+  </view>
+</view>

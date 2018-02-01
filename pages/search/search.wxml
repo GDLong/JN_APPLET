@@ -1,0 +1,15 @@
+<!--pages/search/search.wxml-->
+  <view class="body">
+    <view class="wxSearch">
+      <view class='wxSearch-search'>
+        <input placeholder="寻找你喜欢的商品" focus="true" bindconfirm="bindsearch" search/>
+      </view>
+    </view>
+    <view class="weui_top">
+      <text class='search-instr'>大家都在搜</text>
+      <view class='search-ul'>
+        <button size='mini'>海之蓝</button>
+        <button size='mini'>海之蓝</button>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,83 @@
+@import "/template/orderProduct/orderProduct.wxss" ;
+/* myOrder.wxss */
+.my-order{
+  overflow: hidden;
+}
+.my-order-list{
+  padding-left:20rpx;
+  background-color: #ffffff;
+  margin-bottom: 10rpx;
+}
+.my-order-number{
+  font-size: 12px;
+  color: #999999;
+  padding: 20rpx 0;
+}
+.order-flag{
+  color:orange;
+  font-size: 13px;
+  margin-right:10rpx;
+}
+.order-count{
+  font-size: 12px;
+  color: #999999;
+  text-align:right;
+  padding:10rpx;
+}
+.searchBar{
+  text-align: center;
+  font-size:14px;
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  background-color: #ffffff
+}
+.searchBar text{
+  padding: 10px;
+}
+.searchBar text.on{
+  color: #F02B2B;
+  border-bottom: 1px solid #F02B2B;
+}
+.empty{
+  text-align: center;
+  margin-top: 50%;
+  font-size: 13px;
+  color: #666666;
+}
+.empty-car{
+  width:150rpx;
+  height: 150rpx;
+  display: block;
+  margin: 0 auto;
+  padding-bottom:5px; 
+}
+/* .my-order-list{
+  background-color: #ffffff;
+  margin:10rpx;
+  padding: 30rpx 30rpx 30rpx 20rpx;
+  position: relative;
+}
+.my-order-list::after{
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 20rpx;
+}
+
+.my-order-list-ico{
+  width: 60px;
+  height: 60px
+}
+.my-order-list-explain{margin: 0px 5px}
+.my-order-list-ex-title{display: block;}
+.my-order-list-ex-p{display: block;font-size: 13px;margin-top: 10px;} */

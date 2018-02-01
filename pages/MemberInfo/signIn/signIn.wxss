@@ -1,0 +1,97 @@
+/* signIn.wxss */
+.sign-head{
+  background:url("https://loupan.b0.upaiyun.com/1/ueditor/201801041504151245030.png") no-repeat;
+  background-size:cover; 
+  padding: 30rpx; 
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+}
+.sign-head-total{
+  display: block;
+  text-align: left;
+}
+.sign-head-total-img{
+  height: 60rpx;
+  width: 60rpx;
+  vertical-align: middle;
+}
+.sign-head-total-text{
+  display: inline-block;
+  vertical-align: middle
+}
+.sign-head-point{
+  display: block;
+}
+page{
+  background-color: #ffffff;
+}
+.sign-count{
+  color: #E0620D;
+  padding: 10rpx; 
+  font-size: 10px;
+  width: 90%;
+  margin: 0 auto
+}
+.sign-count .title{
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 0px
+}
+.sign-count .li{
+  line-height: 20px;
+}
+.sign-color{
+  color: #E0620D;
+  font-size: 20px;
+}
+.sign-count text{display: block;}
+.sign-count-bold{color: #E51C23;font-size: 20px}
+.sign-head-ed{
+  position: relative;
+  width:50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 9999px;
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+}
+.sign-head-ed:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 66px;
+  height: 66px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.23);
+  -webkit-animation: 0.8s ease-in infinite alternate halo;
+  animation: 0.8s ease-in infinite alternate halo;
+}
+
+/* 按钮光圈呼吸 */
+@-webkit-keyframes halo {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.818181);
+            transform: scale(0.818181);
+  }
+}
+@keyframes halo {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.818181);
+            transform: scale(0.818181);
+  }
+}

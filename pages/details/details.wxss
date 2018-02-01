@@ -1,0 +1,147 @@
+@import "/wxParse/wxParse.wxss";
+/* details.wxss */
+swiper {
+  width: 100%;
+  height: 400rpx;
+}
+swiper image {
+  width: 100%;
+  height: 400rpx;
+}
+.detail-info{margin: 20rpx 0rpx;}
+.detail-info-u{
+  background-color: #ffffff;
+}
+.detail-info-title{
+  font-size: 38rpx;
+}
+.detail-info-price{
+  font-size: 15px;
+}
+.detail_color{color: #fb4b4d}
+.details-pic{overflow: hidden;margin-bottom: 10rpx}
+.details-pic .wxParse-img{margin: 0 auto}
+.list-pic{
+  width: 100%;
+  float: left
+}
+.fixFoot{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.fixFoot{
+  background-color:#ffffff;
+  text-align:center;
+  color: #999;
+  font-size: 15px;
+  height:100rpx;
+}
+.ico{
+  width:20px;
+  height:20px;
+  margin:0 auto;
+  display: block;
+}
+.BuyNow{
+  background-color:#E51C23;
+  color: #ffffff;
+  line-height: 100rpx;
+}
+.AddCar{
+  line-height: 100rpx;
+}
+.goHome{
+  padding: 10rpx 0;
+  font-size:26rpx;
+}
+.goCar{
+  padding: 10rpx 0;
+  font-size:26rpx;
+}
+.saleProduct-Price-current{
+  display: block;
+  color:#f02b2b;
+  font-size:15px;
+  font-weight:bold;
+
+}
+.saleProduct-Price-original{
+  text-decoration:line-through;
+  color: #999;
+  font-size:13px;
+}
+.detail-info-math{
+  padding:5px 10px;
+  line-height:2;
+  font-size:15px;
+}
+/*加减  */
+/*主容器*/  
+.stepper {   
+    height: 26px;  
+    /*给主容器设一个边框*/  
+    border: 1rpx solid #ccc;  
+    border-radius: 3rpx;   
+}  
+/*加号和减号*/  
+.stepper text {  
+    width: 25px;  
+    line-height: 26px;  
+    text-align: center;  
+    float: left;  
+}  
+/*数值*/  
+
+.stepper input {  
+    width: 30px;  
+    height: 26px;  
+    float: left;  
+    margin: 0 auto;  
+    text-align: center;  
+    font-size: 12px;  
+    min-height:auto;
+    /*给中间的input设置左右边框即可*/  
+    border-left: 1rpx solid #ccc;  
+    border-right: 1rpx solid #ccc;  
+}   
+/*普通样式*/  
+.stepper .normal{  
+    color: black;  
+}  
+/*禁用样式*/  
+.stepper .disabled{  
+    color: #ccc;  
+} 
+.product_id{
+  background-color: #f8f8f8;
+  display:inline-block;
+  padding:5px;
+  margin: 5px;
+  font-size:14px;
+  border-radius:4px;
+  -webkit-border-radius:4px;
+  color: #666666
+}
+.product_id.on{
+  background-color: #E51C23;
+  color: #ffffff
+}
+.car_doc{
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background-color: #E51C23;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  color:#fff;
+  font-size:10px;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  padding: 1px
+}

@@ -1,0 +1,28 @@
+/* pages/Article/article.wxss */
+.article-head{
+  font-size:15px;
+  padding:10px 10px 5px 0;
+  line-height:25px;
+  border-bottom:1rpx solid #C9C4BF;
+  margin-left:15px;
+}
+.article-date{
+  font-size: 12px;
+  color: #666666;
+}
+.article-body image {
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+.article-body{
+    padding: 5px 15px;
+    font-size: 14px;
+    margin-bottom:30rpx; 
+    line-height: 20px;
+}
+.article-body text {
+    display: block;
+    margin-bottom:5px;
+    text-indent: 10px
+}

@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/details/details",
+    "pages/loginRegister/login/login",
+    "pages/loginRegister/register/register",
+    "pages/Union/Union",
+    "pages/Member/Member",
+    "pages/company/company",
+    "pages/MemberInfo/myMember/myMember",
+    "pages/MemberInfo/accountBalance/accoundBalance",
+    "pages/MemberInfo/signIn/signIn",
+    "pages/MemberInfo/myOrder/myOrder",
+    "pages/MemberInfo/applicationWithdrawal/applicationWithdrawal",
+    "pages/MemberInfo/accountManagement/accountManagement",
+    "pages/order/order",
+    "pages/searchList/searchList",
+    "pages/search/search",
+    "pages/shoppingCar/shoppingCar",
+    "pages/MemberInfo/myOrderInfo/myOrderInfo",
+    "pages/MemberInfo/billingDetails/billingDetails",
+    "pages/Address/adddress",
+    "pages/Article/article"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "犟牛商城",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#eeeeee"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#E51C23",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/Union/Union",
+        "text": "联盟商家",
+        "iconPath": "images/lol.png",
+        "selectedIconPath": "images/lol-active.png"
+      },
+      {
+        "pagePath": "pages/Member/Member",
+        "text": "个人中心",
+        "iconPath": "images/usercenter.png",
+        "selectedIconPath": "images/usercenter-active.png"
+      },
+      {
+        "pagePath": "pages/company/company",
+        "text": "关于犟牛",
+        "iconPath": "images/about.png",
+        "selectedIconPath": "images/about-active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 5000
+  }
+}

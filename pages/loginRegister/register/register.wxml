@@ -1,0 +1,52 @@
+<!--register.wxml-->
+<view class="body">
+  <view class='register weui-flex'>
+    <view>
+      <image src="{{Authorization.avatarUrl}}" class='register-headImg'></image>
+    </view>
+    <view class='weui-flex__item register-user'>
+      <view class='userName'>
+        <text>{{Authorization.nickName}}</text>
+        <text>（普通会员）</text>
+      </view>
+      <view class='reference'><text>推荐人：{{refereAccount}}</text></view>
+    </view>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/04.png'></image>
+      <text>真实姓名：</text>
+      <input name="memberName" placeholder='请填写真实姓名'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/02.png'></image>
+      <text>手机号码：</text>
+      <input name="memPhone" type="number" placeholder='请填写手机号码'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/08.png'></image>
+      <text>身份证号码：</text>
+      <input name="perNo" type="idcard" value='{{perNo}}' bindblur='setperNo' placeholder='请填写身份证号码'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/05.png'></image>
+      <text>开户行：</text>
+      <input name="BanName" placeholder='请填写开户银行'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/03.png'></image>
+      <text>银行卡号：</text>
+      <input name="AccountNo" type="number" placeholder='请填写银行卡号'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/usercenter.png'></image>
+      <text>登录名：</text>
+      <input name="UserAcoount" disabled placeholder='点击按钮获取登录名' value='{{returnCode}}' />
+      <button type="default" disabled="{{getUserAcoount}}" bindtap='postUserAccount'>获取</button>
+    </view>
+    <view class="am-btn">
+      <button type="default" formType="submit">开通会员</button>
+    </view>
+  </form>
+</view>
+

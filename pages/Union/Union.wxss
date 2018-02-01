@@ -1,0 +1,29 @@
+@import "../../template/business/business.wxss" ;
+/* Union.wxss */
+.union-bg-img {
+  width: 100%;
+  height: 400rpx;
+}
+.tabbar{
+  background-color:#ffffff; 
+  text-align:center;
+}
+.tabbars{
+  margin: 0px 10px;
+  padding:10px;
+}
+.tabbars.on{
+  color:#E51C23;
+  border-bottom: 1px solid #E51C23
+}
+.tabbar-list-item {
+    width: 100%;
+    overflow: hidden;
+}
+.tabbars-img{
+  width:100%;
+  height:50px;
+}
+.tabbar-list-item {
+    overflow: hidden;
+}

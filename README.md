@@ -1,1 +1,1 @@
-# JN_APPLET
+# JN_Applet
